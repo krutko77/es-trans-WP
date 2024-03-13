@@ -2,8 +2,18 @@
 
 #akismet-plugin-container {
 	background-color: var(--akismet-color-light-grey);
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
-    --akismet-color-charcoal: #272635;
+	font-family:
+		"Inter",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		"Roboto",
+		"Oxygen-Sans",
+		"Ubuntu",
+		"Cantarell",
+		"Helvetica Neue",
+		sans-serif;
+	--akismet-color-charcoal: #272635;
 	--akismet-color-light-grey: #f6f7f7;
 	--akismet-color-mid-grey: #a7aaad;
 	--akismet-color-dark-grey: #646970;
@@ -48,7 +58,8 @@
 	font-weight: 600;
 }
 
-.akismet-button, .akismet-button:hover {
+.akismet-button,
+.akismet-button:hover {
 	background-color: var(--akismet-color-mid-green);
 	border: 0;
 	color: #fff;
@@ -87,7 +98,7 @@
 
 /* Need this specificity to override the existing link rule */
 #akismet-plugin-container a.akismet-masthead__back-link {
-	background-image: url(../img/arrow-left.svg);
+	background-image: url(assets/img/arrow-left.svg);
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: 16px;
@@ -133,7 +144,9 @@
 
 .akismet-box,
 .akismet-card {
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+	box-shadow:
+		0 4px 12px rgba(0, 0, 0, 0.06),
+		0 0 2px rgba(0, 0, 0, 0.16);
 	border-radius: 8px;
 	overflow: hidden;
 }
@@ -187,7 +200,7 @@
 }
 
 .akismet-card-actions__secondary-action a[target="_blank"]::after {
-	background: url('../img/icon-external.svg') no-repeat;
+	background: url("assets/img/icon-external.svg") no-repeat;
 	background-size: contain;
 	content: "";
 	display: inline-block;
@@ -226,7 +239,7 @@
 
 /* Fix up misbehaving wp-admin styles in Chrome (from forms and colors stylesheets) */
 .akismet-settings__row input[type="checkbox"]:checked:before {
-	content: '';
+	content: "";
 }
 
 .akismet-settings__row input[type="radio"]:checked:before {
@@ -259,7 +272,8 @@
 	padding-left: 1em;
 }
 
-.akismet-account th, .akismet-account td {
+.akismet-account th,
+.akismet-account td {
 	padding-bottom: 1em;
 }
 

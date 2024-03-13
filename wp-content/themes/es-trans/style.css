@@ -1,9 +1,7 @@
 /*
 Theme Name: es-trans
-/*
+*/
 @charset "UTF-8";
-
-/* $accentColor: #CF0807; */
 
 @font-face {
 	font-family: icons;
@@ -912,11 +910,23 @@ h3 {
 	margin-bottom: 1.0714285714em;
 }
 
+h4 {
+	font-size: 1.5rem;
+	font-weight: 900;
+	line-height: 1.25;
+	text-align: left;
+	margin-bottom: 0.4166666667em;
+}
+
 .text {
 	/* font-family: "Roboto";
 	font-weight: 400; */
 	font-size: 1.25rem;
 	line-height: 1.5;
+}
+
+.text-right {
+	text-align: right;
 }
 
 .link {
@@ -963,6 +973,10 @@ h3 {
 
 .margin-bottom-80 {
 	margin-bottom: 80px;
+}
+
+.margin-bottom-100 {
+	margin-bottom: 100px;
 }
 
 .margin-bottom-120 {
@@ -1085,8 +1099,22 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	display: flow-root;
 }
 
-.img-box {
+.img-box-300 {
+	width: 300px;
+}
+
+.img-box-400 {
 	width: 400px;
+}
+
+.img-width-300 {
+	aspect-ratio: 300/400;
+	overflow: hidden;
+}
+
+.img-width-400 {
+	aspect-ratio: 400/300;
+	overflow: hidden;
 }
 
 .icons-check {
@@ -1326,9 +1354,12 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 }
 
 .card__img-wrapper {
-	margin-bottom: 0.75em;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
 	aspect-ratio: 67/65;
 	overflow: hidden;
+	margin-bottom: 0.75em;
 }
 
 .card__icons {
@@ -1401,13 +1432,8 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	background: url("assets/img/services/bg-services.jpg") center/cover no-repeat fixed;
 }
 
-.services__img-box--1 {
+.services__img-box-400 {
 	aspect-ratio: 400/300;
-	overflow: hidden;
-}
-
-.services__img-box--2 {
-	aspect-ratio: 400/273;
 	overflow: hidden;
 }
 
@@ -1455,37 +1481,9 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	height: 60px;
 }
 
-.reviews .list__item-wrapper--1 {
-	aspect-ratio: 342/60;
-}
-
-.reviews .list__item-wrapper--2 {
-	aspect-ratio: 286/60;
-}
-
-.reviews .list__item-wrapper--3 {
-	aspect-ratio: 148/60;
-}
-
-.reviews .list__item-wrapper--4 {
-	aspect-ratio: 60/60;
-}
-
-.reviews .list__item-wrapper--5 {
-	aspect-ratio: 149/60;
-}
-
-.reviews .list__item-wrapper--6 {
-	aspect-ratio: 158/60;
-}
-
-.reviews .list__item-wrapper--7 {
-	aspect-ratio: 87/60;
-}
-
 .reviews .list__img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .reviews__video-box {
@@ -1493,6 +1491,8 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	position: absolute;
 	bottom: -10px;
 	right: 0;
+	aspect-ratio: 70/35;
+	overflow: hidden;
 }
 
 .swiper__label {
@@ -2134,14 +2134,77 @@ button.swiper-pagination-bullet {
 }
 
 .about {
-	padding: 110px 0 0;
+	padding-bottom: 0;
 }
 
-.about .about__story,
-.about .about__team,
-.about .about__garage {
-	min-height: 400px;
-	padding: 0;
+.about__img {
+	width: 100%;
+	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.about__garage {
+	background-color: #dcdddd;
+	padding-top: 50px;
+	padding-bottom: 110px;
+}
+
+.about__list-awars,
+.about__list-win {
+	padding-left: 20px;
+}
+
+.about .flight-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.about .flight-list__item {
+	max-width: 100%;
+}
+
+.about .garage-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.about .garage-list__item {
+	max-width: 100%;
+}
+
+.about__list-awars li {
+	list-style-type: square;
+}
+
+.win-list li {
+	list-style-type: disc;
+}
+
+.flight-list li {
+	list-style-type: none;
+}
+
+.img-width-370 {
+	aspect-ratio: 370/224;
+	overflow: hidden;
+}
+
+.img-width-584 {
+	aspect-ratio: 584/400;
+	overflow: hidden;
 }
 
 .thank {
@@ -2662,62 +2725,70 @@ p.error-404__text {
 
 @media (max-width: 1500px) {
 	section {
-		padding-top: calc(50px + 50 * (100vw - 320px) / 880);
-		padding-bottom: calc(50px + 50 * (100vw - 320px) / 880);
+		padding-top: calc(50px + 60 * (100vw - 320px) / 1180);
+		padding-bottom: calc(50px + 60 * (100vw - 320px) / 1180);
 	}
 
 	section.action-block {
-		padding-top: calc(50px + 20 * (100vw - 320px) / 880);
-		padding-bottom: calc(50px + 20 * (100vw - 320px) / 880);
+		padding-top: calc(50px + 20 * (100vw - 320px) / 1180);
+		padding-bottom: calc(50px + 20 * (100vw - 320px) / 1180);
 	}
 
 	.sub-subtitle {
-		font-size: calc(22px + 2 * (100vw - 320px) / 940);
+		font-size: calc(22px + 2 * (100vw - 320px) / 1180);
 	}
 
 	h1,
 	h2 {
-		font-size: calc(1.6875rem + 18 * (100vw - 320px) / 880);
+		font-size: calc(1.6875rem + 18 * (100vw - 320px) / 1180);
 	}
 
 	h3 {
-		font-size: calc(1.25rem + 6 * (100vw - 320px) / 880);
+		font-size: calc(1.25rem + 6 * (100vw - 320px) / 1180);
+	}
+
+	h4 {
+		font-size: calc(1.125rem + 6 * (100vw - 320px) / 1180);
 	}
 
 	.text {
-		font-size: calc(1rem + 2 * (100vw - 320px) / 880);
+		font-size: calc(1rem + 2 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-10 {
-		margin-bottom: calc(7px + 3 * (100vw - 320px) / 940);
+		margin-bottom: calc(7px + 3 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-20 {
-		margin-bottom: calc(15px + 5 * (100vw - 320px) / 940);
+		margin-bottom: calc(15px + 5 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-30 {
-		margin-bottom: calc(20px + 10 * (100vw - 320px) / 940);
+		margin-bottom: calc(20px + 10 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-40 {
-		margin-bottom: calc(25px + 10 * (100vw - 320px) / 940);
+		margin-bottom: calc(25px + 10 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-50 {
-		margin-bottom: calc(30px + 10 * (100vw - 320px) / 940);
+		margin-bottom: calc(30px + 10 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-60 {
-		margin-bottom: calc(35px + 15 * (100vw - 320px) / 940);
+		margin-bottom: calc(35px + 15 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-80 {
-		margin-bottom: calc(45px + 20 * (100vw - 320px) / 940);
+		margin-bottom: calc(45px + 20 * (100vw - 320px) / 1180);
+	}
+
+	.margin-bottom-100 {
+		margin-bottom: calc(60px + 40 * (100vw - 320px) / 1180);
 	}
 
 	.margin-bottom-120 {
-		margin-bottom: calc(50px + 50 * (100vw - 320px) / 940);
+		margin-bottom: calc(70px + 50 * (100vw - 320px) / 1180);
 	}
 
 	.action-block__wrapper {
@@ -2740,8 +2811,9 @@ p.error-404__text {
 		font-size: calc(1.125rem + 2 * (100vw - 320px) / 880);
 	}
 
-	.about {
-		padding-top: calc(50px + 50 * (100vw - 320px) / 880);
+	.about__garage {
+		padding-top: calc(30px + 20 * (100vw - 320px) / 1180);
+		padding-bottom: calc(50px + 60 * (100vw - 320px) / 1180);
 	}
 
 	.policy,
@@ -2753,7 +2825,11 @@ p.error-404__text {
 }
 
 @media (max-width: 75em) {
-	.img-box {
+	.img-box-300 {
+		width: 25%;
+	}
+
+	.img-box-400 {
 		width: 30%;
 	}
 
@@ -2803,7 +2879,11 @@ p.error-404__text {
 }
 
 @media (max-width: 61.99875em) {
-	.img-box {
+	.img-box-300 {
+		width: 30%;
+	}
+
+	.img-box-400 {
 		width: 35%;
 	}
 
@@ -3017,7 +3097,11 @@ p.error-404__text {
 		margin: 0.75em 0;
 	}
 
-	.img-box {
+	.img-box-300 {
+		width: 100%;
+	}
+
+	.img-box-400 {
 		width: 100%;
 	}
 
@@ -3063,6 +3147,10 @@ p.error-404__text {
 	.home {
 		padding: 100px 0 70px;
 		background-image: url("./assets/img/bg-home-480-50.jpg");
+	}
+
+	.about .garage-list {
+		gap: 20px;
 	}
 }
 

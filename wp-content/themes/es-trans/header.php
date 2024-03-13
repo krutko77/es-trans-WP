@@ -31,7 +31,7 @@
 							<li class="menu__item"><a data-goto-header data-goto=".prices" href="#" class="menu__link">Цены</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".services" href="#" class="menu__link">Услуги</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
-							<li class="menu__item"><a data-goto-header data-goto=".about" href="#" class="menu__link">О нас</a></li>
+							<li class="menu__item"><a href="<?php bloginfo('url'); ?>/es-trans/o-nas/" class="menu__link">О нас</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
 						</ul>
 					</nav>
