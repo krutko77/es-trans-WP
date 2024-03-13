@@ -14,7 +14,7 @@
 <div class="chatme" data-lp>
 	<div class="chatme__icon"><a class="chatme__link" href="https://t.me/ESTrans1" target="_blank"></a></div>
 </div>
-</div>
+
 <div id="popup-1" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
@@ -143,6 +143,7 @@
 		</div>
 	</div>
 </div>
+
 <script src="js/app.min.js?_v=20240307172627"></script>
 <script id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js?_v=20240307172627" data-bg="#645862" data-fg="#FFFFFF" data-link="#F1D600" data-font-size="13px" data-message="Мы cохраняем файлы cookie: если согласны, нажмите кнопку 'Принимаю'." data-moreinfo="http://es-trans/soglashenie/" data-linkmsg="Соглашение" data-close-text="Принимаю">
 </script>

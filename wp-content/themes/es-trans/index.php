@@ -183,12 +183,7 @@ Template Name: Главная
 		</div>
 	</section>
 	<section class="action-block">
-		<div class="action-block__container">
-			<div class="action-block__wrapper">
-				<h3 class="action-block__subtitle subtitle">Узнайте стоимость вашего заказа</h3>
-				<button class="action-block__btn action-button" data-popup="#popup-form" aria-label="Кнопка рассчитать стоимость" data-watch data-watch-once>Рассчитать стоимость</button>
-			</div>
-		</div>
+		<?php get_template_part('template-parts/action-block'); ?>
 	</section>
 	<section class="services" data-watch="navigator" data-watch-threshold="0.15">
 		<div class="services__container">
@@ -268,27 +263,33 @@ Template Name: Главная
 				<h3 class="reviews__subtitle subtitle">Мы гордимся нашими клиентами!</h3>
 			</div>
 			<ul class="reviews__list list margin-bottom-80">
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--1"><img class="list__img" width="342" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/1.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--2"><img class="list__img" width="286" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/2.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--3"><img class="list__img" width="148" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/3.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--4"><img class="list__img" width="60" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/4.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--5"><img class="list__img" width="149" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/5.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--6"><img class="list__img" width="158" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/6.png" alt="логотип"></div>
-				</li>
-				<li class="list__item">
-					<div class="list__item-wrapper list__item-wrapper--7"><img class="list__img" width="87" height="60" data-src="<?php bloginfo('template_url'); ?>/assets/img/reviews/logo-60/7.png" alt="логотип"></div>
-				</li>
+
+				<?php
+				// параметры по умолчанию
+				$my_posts = get_posts(array(
+					'numberposts' => -1,
+					'category_name'    => 'logo', // переименовать 'category' в 'category_name'  
+					'orderby'     => 'date',
+					'order'       => 'ASC',
+					'post_type'   => 'post',
+					'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+				));
+
+				global $post;
+
+				foreach ($my_posts as $post) {
+					setup_postdata($post);
+				?>
+					<li class="list__item">
+						<div class="list__item-wrapper"><img class="list__img" height="60" src="<?php the_field('logo'); ?>" alt="логотип <?php the_title(); ?>"></div>
+					</li>
+				<?php
+				}
+
+				wp_reset_postdata();  // сброс
+
+				?>
+
 			</ul>
 			<div class="reviews__subtitle-box subtitle-box margin-bottom-30">
 				<svg class="reviews__icons icons-check">
@@ -394,12 +395,7 @@ Template Name: Главная
 		</div>
 	</section>
 	<section class="action-block">
-		<div class="action-block__container">
-			<div class="action-block__wrapper">
-				<h3 class="action-block__subtitle subtitle">Узнайте стоимость вашего заказа</h3>
-				<button class="action-block__btn action-button" data-popup="#popup-form" aria-label="Кнопка рассчитать стоимость" data-watch data-watch-once>Рассчитать стоимость</button>
-			</div>
-		</div>
+		<?php get_template_part('template-parts/action-block'); ?>
 	</section>
 	<section class="contact" data-watch="navigator" data-watch-threshold="0.3">
 		<div class="contact__container">
