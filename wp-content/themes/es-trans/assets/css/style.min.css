@@ -1000,6 +1000,7 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon) {
 	height: 40px;
 	width: 40px;
 	opacity: 0.7;
+	vertical-align: middle;
 	-webkit-transition: opacity 0.3s ease;
 	transition: opacity 0.3s ease;
 }
@@ -2303,13 +2304,13 @@ p.error-404__text {
 		margin-bottom: calc(30px + 5 * (100vw - 480px) / 780);
 	}
 	.home__title {
-		font-size: calc(3.125rem + 10 * (100vw - 320px) / 880);
+		font-size: calc(2.8125rem + 25 * (100vw - 320px) / 1180);
 	}
 	.home__label {
-		font-size: calc(1.5625rem + 10 * (100vw - 320px) / 880);
+		font-size: calc(1.25rem + 10 * (100vw - 320px) / 1180);
 	}
 	.home .list__item p {
-		font-size: calc(1.125rem + 2 * (100vw - 320px) / 880);
+		font-size: calc(1.0625rem + 2 * (100vw - 320px) / 1180);
 	}
 	.about__garage {
 		padding-top: calc(30px + 20 * (100vw - 320px) / 1180);
@@ -2534,6 +2535,9 @@ p.error-404__text {
 		top: -5px;
 		margin-right: 3px;
 	}
+	.home .list__item {
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 29.99875em) {
 	.popup__content {
@@ -2583,7 +2587,7 @@ p.error-404__text {
 		bottom: 30px;
 	}
 	.home {
-		padding: 100px 0 70px;
+		padding: 50px 0 70px;
 		background-image: url(assets/img/bg-home-480-50.jpg);
 	}
 	.about .garage-list {

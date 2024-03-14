@@ -295,7 +295,7 @@ Template Name: Политика конфиденциальтности
 					сети Интернет по адресу: www.es-trans.ru</li>
 			</ol>
 		</div>
-	</div>
+	</div>	
 </main>
 
 <?php get_footer(); ?>

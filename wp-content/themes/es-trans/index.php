@@ -409,19 +409,18 @@ Template Name: Главная
 						</li>
 						<li class="list__item margin-bottom-20">
 							<div class="list__item-wrapper">
-								<span class="list__item-icon _icon-phone-flip"></span><a href="tel:74957753078" class="list__item-link link">+7 (495) 775-30-78</a>
+								<span class="list__item-icon _icon-phone-flip"></span><a href="tel:><?php the_field('tag-phone'); ?>" class="list__item-link link"><?php the_field('phone'); ?></a>
 							</div>
 						</li>
 						<li class="list__item margin-bottom-20">
 							<div class="list__item-wrapper">
-								<span class="list__item-icon _icon-email"></span><a href="mailto:info@es-trans.pro" class="list__item-link link">info@es-trans.pro</a>
+								<span class="list__item-icon _icon-email"></span><a href="mailto:<?php the_field('e-mail'); ?>" class="list__item-link link"><?php the_field('e-mail'); ?></a>
 							</div>
 						</li>
 						<li class="list__item margin-bottom-20">
 							<div class="list__item-wrapper location">
 								<span class="list__item-icon _icon-location-dot"></span>
-								<p class="list__item-link">Россия, 125315, г. Москва, Ленинградский проспект, д. 80, кор.
-									5, офис 203</p>
+								<p class="list__item-link"><?php the_field('address'); ?></p>
 							</div>
 						</li>
 						<li class="list__item">
@@ -431,12 +430,12 @@ Template Name: Главная
 					<p class=" contact__text margin-bottom-20">Для письменного общения в формате онлайн,
 						пожалуйста пишите нам в мессенджеры:</p>
 					<div class="contact__social">
-						<a class="contact__link-icon" href="https://t.me/ESTrans1" target="_blank">
+						<a class="contact__link-icon" href="<?php the_field('telegram'); ?>" target="_blank">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/icons/icons.svg#telegram"></use>
 							</svg>
 						</a>
-						<a class="contact__link-icon" href="whatsapp://send?phone=79872294675" target="_blank">
+						<a class="contact__link-icon" href="whatsapp://send?phone=<?php the_field('whatsapp'); ?>" target="_blank">
 							<svg class="icon">
 								<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/icons/icons.svg#whatsapp"></use>
 							</svg>
@@ -444,7 +443,7 @@ Template Name: Главная
 					</div>
 				</div>
 				<div class="contact__map">
-					<iframe data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d231bda729e55daf8e0ab7341ed242b99f2c48478d79f506328277b903feb53&amp;source=constructor"></iframe>
+					<iframe data-src="<?php the_field('map'); ?>"></iframe>
 				</div>
 			</div>
 		</div>

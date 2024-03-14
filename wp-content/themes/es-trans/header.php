@@ -38,7 +38,7 @@
 					<div class="menu__icon-wrapper">
 						<ul class="menu__social social">
 							<li class="social__item">
-								<a class="social__link" target="_blank" href="whatsapp://send?phone=79039609478">
+								<a class="social__link" target="_blank" href="whatsapp://send?phone=<?php the_field('whatsapp'); ?>">
 									<svg class="social__icon">
 										<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/icons/icons.svg#whatsapp"></use>
 									</svg>
@@ -46,8 +46,8 @@
 							</li>
 							<li class="social__item">
 								<div class="opening-hours-telephone">
-									<a class="telephone link" href="tel:74957753078">+7 (495) 775-30-78</a>
-									<p class="opening-hours">с 09.00 до 18.00</p>
+									<a class="telephone link" href="tel:<?php the_field('tag-phone'); ?>"><?php the_field('phone'); ?></a>
+									<p class="opening-hours"><?php the_field('opening-hours'); ?></p>
 								</div>
 							</li>
 						</ul>

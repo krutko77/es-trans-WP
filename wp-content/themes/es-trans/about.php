@@ -188,21 +188,37 @@ Template Name: 404
 				<p class="about__text margin-bottom-30">Парк ООО "ЕС Транс" состоит из 13 тентованных автопоездов. Тягачи
 					Евро 5 и Евро 6 – Mercedes Actros и Foton.</p>
 				<ul class="about__list-garage garage-list">
-					<li class="garage-list__item img-width-300"><img class="about__img" data-src="<?php bloginfo('template_url'); ?>/assets/img/about/about-park-1-300.jpg" alt="грузовая машина ЕС Транс" width="300" height="400"></li>
-					<li class="garage-list__item img-width-300"><img class="about__img" data-src="<?php bloginfo('template_url'); ?>/assets/img/about/about-park-2-300.jpg" alt="грузовая машина ЕС Транс" width="300" height="400"></li>
-					<li class="garage-list__item img-width-300"><img class="about__img" data-src="<?php bloginfo('template_url'); ?>/assets/img/about/about-park-3-300.JPG" alt="грузовая машина ЕС Транс" width="300" height="400"></li>
-					<li class="garage-list__item img-width-584"><img class="about__img" data-src="<?php bloginfo('template_url'); ?>/assets/img/about/about-park-4-584.JPG" alt="грузовая машина ЕС Транс" width="584" height="400"></li>
+
+					<?php
+					// параметры по умолчанию
+					$my_posts = get_posts(array(
+						'numberposts' => -1,
+						'category_name'    => 'park', // переименовать 'category' в 'category_name'  
+						'orderby'     => 'date',
+						'order'       => 'ASC',
+						'post_type'   => 'post',
+						'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+					));
+
+					global $post;
+
+					foreach ($my_posts as $post) {
+						setup_postdata($post);
+					?>
+						<li class="garage-list__item"><img class="about__img" data-src="<?php the_field('park'); ?>" alt="грузовая машина <?php the_title(); ?>" height="400"></li>
+					<?php
+					}
+
+					wp_reset_postdata();  // сброс
+
+					?>
+
 				</ul>
 			</div>
 		</article>
 	</section>
 	<section class="action-block">
-		<div class="action-block__container">
-			<div class="action-block__wrapper">
-				<h3 class="action-block__subtitle subtitle">Узнайте стоимость вашего заказа</h3>
-				<button class="action-block__btn action-button" data-popup="#popup-form" aria-label="Кнопка рассчитать стоимость" data-watch data-watch-once>Рассчитать стоимость</button>
-			</div>
-		</div>
+		<?php get_template_part('template-parts/action-block'); ?>
 	</section>
 </main>
 
