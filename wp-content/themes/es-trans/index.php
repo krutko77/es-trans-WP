@@ -189,17 +189,17 @@ Template Name: Главная
 		<div class="services__container">
 			<h2 class="services__title title">Услуги</h2>
 			<div class="clearfix margin-bottom-50">
-				<div class="services__img-box services__img-box--1 img-box float-left">
+				<div class="services__img-box img-box-400 float-left">
 					<img class="services__img" data-src="<?php the_field('photo-uslugi-1'); ?>" width="400" height="300" alt="автомобиль 'ЕС Транс'">
 				</div>
 				<p class="services__text margin-bottom-20"><?php the_field('text-uslugi-1-1'); ?></p>
 				<p class="services__text margin-bottom-20"><?php the_field('text-uslugi-1-2'); ?></p>
-				<div class="services__img-box services__img-box--2 img-box float-right">
+				<div class="services__img-box img-box-400 float-right">
 					<img class="services__img" data-src="<?php the_field('photo-uslugi-2'); ?>" width="400" height="300" alt="автомобиль 'ЕС Транс'">
 				</div>
 				<p class="services__text margin-bottom-20"><?php the_field('text-uslugi-1-3'); ?></p>
 				<p class="services__text margin-bottom-20"><?php the_field('text-uslugi-1-4'); ?></p>
-				<div class="services__img-box services__img-box--1 img-box float-left">
+				<div class="services__img-box img-box-400 float-left">
 					<img class="services__img" data-src="<?php the_field('photo-uslugi-3'); ?>" width="400" height="300" alt="автомобиль 'ЕС Транс'">
 				</div>
 				<p class="services__text margin-bottom-20"><?php the_field('text-uslugi-1-5'); ?></p>

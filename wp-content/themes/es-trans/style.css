@@ -1431,12 +1431,13 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	background: url("assets/img/services/bg-services.jpg") center/cover no-repeat fixed;
 }
 
-.services__img-box-400 {
-	aspect-ratio: 400/300;
+.services__img-box {
 	overflow: hidden;
+	aspect-ratio: 400/300;
 }
 
 .services__img {
+	object-fit: cover;
 	width: 100%;
 	height: auto;
 }
@@ -2409,7 +2410,7 @@ p.error-404__text {
 }
 
 .b24-form-recaptcha {
-	opacity: 0.5;
+	display: none !important;
 }
 
 .b24-form-field-agreement .b24-form-field-agreement-link {

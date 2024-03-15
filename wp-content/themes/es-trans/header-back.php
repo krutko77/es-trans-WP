@@ -4,15 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ЕС Транс | Политика конфиденциальности</title>
+	<title><?php wp_title('|', true, 'right'); ?></title>
 	<meta name="description" content="Политика обработки персональных данных пользователей сайта">
 	<meta name="keywords" content=" ">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Regular.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Medium.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Light.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Bold.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Black.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Regular.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Medium.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Light.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Bold.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Black.woff2">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicons/favicon.ico">
 	<?php wp_head(); ?>
 </head>
@@ -27,7 +27,7 @@
 				<div class="menu__icon-wrapper">
 					<ul class="menu__social social">
 						<li class="social__item">
-							<a class="social__link" target="_blank" href="whatsapp://send?phone=<?php the_field('whatsapp'); ?>">
+							<a class="social__link" target="_blank" href="whatsapp://send?phone=<?php the_field('whatsapp', 6); ?>">
 								<svg class="social__icon">
 									<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/icons/icons.svg#whatsapp"></use>
 								</svg>
@@ -35,8 +35,8 @@
 						</li>
 						<li class="social__item">
 							<div class="opening-hours-telephone">
-								<a class="telephone link" href="tel:<?php the_field('tag-phone'); ?>"><?php the_field('phone'); ?></a>
-								<p class="opening-hours"><?php the_field('opening-hours'); ?></p>
+								<a class="telephone link" href="tel:<?php the_field('tag-phone', 6); ?>"><?php the_field('phone', 6); ?></a>
+								<p class="opening-hours"><?php the_field('opening-hours', 6); ?></p>
 							</div>
 						</li>
 					</ul>

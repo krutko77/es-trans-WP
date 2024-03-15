@@ -8,11 +8,11 @@
 	<meta name="description" content="undefined">
 	<meta name="keywords" content=" ">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Regular.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Medium.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Light.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Bold.woff2">
-	<link rel="preload" crossorigin="anonymous" as="font" href="fonts/Roboto-Black.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Regular.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Medium.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Light.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Bold.woff2">
+	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Black.woff2">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicons/favicon.ico">
 	<?php wp_head(); ?>
 </head>
@@ -31,8 +31,8 @@
 							<li class="menu__item"><a data-goto-header data-goto=".prices" href="#" class="menu__link">Цены</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".services" href="#" class="menu__link">Услуги</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
-							<li class="menu__item"><a href="<?php bloginfo('url'); ?>/es-trans/o-nas/" class="menu__link">О нас</a></li>
 							<li class="menu__item"><a data-goto-header data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><a href="<?php bloginfo('url'); ?>/es-trans/o-nas/" class="menu__link">О нас</a></li>
 						</ul>
 					</nav>
 					<div class="menu__icon-wrapper">

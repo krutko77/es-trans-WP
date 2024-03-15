@@ -186,7 +186,7 @@ Template Name: 404
 					<h3 class="about__subtitle subtitle">Наш парк</h3>
 				</div>
 				<p class="about__text margin-bottom-30">Парк ООО "ЕС Транс" состоит из 13 тентованных автопоездов. Тягачи
-					Евро 5 и Евро 6 – Mercedes Actros и Foton.</p>
+					Евро 5 и Евро 6 – Mercedes и Foton.</p>
 				<ul class="about__list-garage garage-list">
 
 					<?php
