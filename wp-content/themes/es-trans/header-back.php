@@ -5,8 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title('|', true, 'right'); ?></title>
-	<meta name="description" content="Политика обработки персональных данных пользователей сайта">
-	<meta name="keywords" content=" ">
+	<meta name="keywords" content="автомобильные грузоперевозки из Европы, автомобильные грузоперевозки из Китая, автомобильные грузоперевозки по России, грузовые авиаперевозки, таможенное оформление в России, автомобильные грузоперевозки в страны ЕАЭС">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Regular.woff2">
 	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Medium.woff2">
@@ -14,6 +13,8 @@
 	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Bold.woff2">
 	<link rel="preload" crossorigin="anonymous" as="font" href="<?php bloginfo('template_url'); ?>/assets/fonts/Roboto-Black.woff2">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicons/favicon.ico">
+	<link rel="icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicons/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/img/favicons/apple.png">
 	<?php wp_head(); ?>
 </head>
 
