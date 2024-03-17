@@ -29,20 +29,24 @@
 				<div class="header__menu menu">
 					<nav class="menu__body">
 
+						<?php
+						wp_nav_menu([
+							'theme_location'  => 'header_menu',
+							'menu'            => 'header_menu',
+							'container'       => false,
+							'menu_class'      => 'menu__list',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
+							'depth'           => 1,
+						]);
+						?>
 
-						<ul class="menu__list">
-							<li class="menu__item"><a data-goto=".home" href="#" class="menu__link">Главная</a></li>
-							<li class="menu__item"><a data-goto-header data-goto=".prices" href="#" class="menu__link">Цены</a></li>
-							<li class="menu__item"><a data-goto-header data-goto=".services" href="#" class="menu__link">Услуги</a></li>
-							<li class="menu__item"><a data-goto-header data-goto=".reviews" href="#" class="menu__link">Отзывы</a></li>
-							<li class="menu__item"><a data-goto-header data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
-							<li class="menu__item"><a href="<?php bloginfo('url'); ?>/es-trans/o-nas/" class="menu__link">О нас</a></li>
-						</ul>
 					</nav>
 					<div class="menu__icon-wrapper">
 						<ul class="menu__social social">
 							<li class="social__item">
-								<a class="social__link" target="_blank" href="whatsapp://send?phone=<?php the_field('whatsapp'); ?>">
+								<a class="social__link" target="_blank" href="whatsapp://send?phone=<?php the_field('whatsapp', 6); ?>">
 									<svg class="social__icon">
 										<use xlink:href="<?php bloginfo('template_url'); ?>/assets/img/icons/icons.svg#whatsapp"></use>
 									</svg>
@@ -50,8 +54,8 @@
 							</li>
 							<li class="social__item">
 								<div class="opening-hours-telephone">
-									<a class="telephone link" href="tel:<?php the_field('tag-phone'); ?>"><?php the_field('phone'); ?></a>
-									<p class="opening-hours"><?php the_field('opening-hours'); ?></p>
+									<a class="telephone link" href="tel:<?php the_field('tag-phone', 6); ?>"><?php the_field('phone', 6); ?></a>
+									<p class="opening-hours"><?php the_field('opening-hours', 6); ?></p>
 								</div>
 							</li>
 						</ul>

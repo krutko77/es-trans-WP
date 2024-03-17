@@ -1,6 +1,8 @@
 /*
 Theme Name: es-trans
 */
+@charset "UTF-8";
+
 @font-face {
 	font-family: icons;
 	font-display: swap;
@@ -698,11 +700,11 @@ body {
 }
 
 /*
- (i) Стилі будуть застосовуватись до
- всіх класів, що містять *__container
- Наприклад header__container, main__container і т.п.
- Сніппет (HTML): cnt
- */
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
 
 [class*="__container"] {
 	max-width: 75rem;
@@ -918,7 +920,7 @@ h4 {
 
 .text {
 	/* font-family: "Roboto";
-	font-weight: 400; */
+  font-weight: 400; */
 	font-size: 1.25rem;
 	line-height: 1.5;
 }
@@ -992,37 +994,37 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 }
 
 /* .offer-button,
- .action-button,
- .back-button {
-	 color: $mainBgColor;
-	 background-color: $accentColor;
-	 border: 3px solid $accentColor;
-	 transition: background-color 0.3s ease,
-		 color 0.3s ease;
- }
- 
- .transparent-button {
-	 color: $accentColor;
-	 background-color: transparent;
-	 border: 3px solid $accentColor;
-	 transition: background-color 0.3s ease,
-		 color 0.3s ease;
- }
- 
- @media (any-hover: hover) {
- 
-	 .offer-button:hover,
-	 .action-button:hover,
-	 .back-button:hover {
-		 background-color: transparent;
-		 color: $accentColor;
-	 }
- 
-	 .transparent-button:hover {
-		 background-color: $accentColor;
-		 color: $mainBgColor;
-	 }
- } */
+.action-button,
+.back-button {
+   color: $mainBgColor;
+   background-color: $accentColor;
+   border: 3px solid $accentColor;
+   transition: background-color 0.3s ease,
+      color 0.3s ease;
+}
+
+.transparent-button {
+   color: $accentColor;
+   background-color: transparent;
+   border: 3px solid $accentColor;
+   transition: background-color 0.3s ease,
+      color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+
+   .offer-button:hover,
+   .action-button:hover,
+   .back-button:hover {
+      background-color: transparent;
+      color: $accentColor;
+   }
+
+   .transparent-button:hover {
+      background-color: $accentColor;
+      color: $mainBgColor;
+   }
+} */
 
 .offer-button,
 .action-button,
@@ -1204,12 +1206,14 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	flex-wrap: wrap;
 }
 
-.header .menu__item {
+.header .menu__item,
+.header .menu-item {
 	display: inline-block;
 	position: relative;
 }
 
-.header .menu__item:not(:last-child) {
+.header .menu__item:not(:last-child),
+.header .menu-item:not(:last-child) {
 	margin-right: 15px;
 }
 
@@ -1432,14 +1436,15 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 }
 
 .services__img-box {
-	overflow: hidden;
 	aspect-ratio: 400/300;
+	overflow: hidden;
 }
 
 .services__img {
-	object-fit: cover;
 	width: 100%;
 	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .services__list {
@@ -2476,16 +2481,16 @@ p.error-404__text {
 }
 
 /**
-  * Swiper 7.2.0
-  * Most modern mobile touch slider and framework with hardware accelerated transitions
-  * https://swiperjs.com
-  *
-  * Copyright 2014-2021 Vladimir Kharlampidi
-  *
-  * Released under the MIT License
-  *
-  * Released on: October 27, 2021
-  */
+ * Swiper 7.2.0
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2021 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: October 27, 2021
+ */
 
 @font-face {
 	font-family: swiper-icons;
@@ -2833,7 +2838,8 @@ p.error-404__text {
 		width: 30%;
 	}
 
-	.header .menu__item:not(:last-child) {
+	.header .menu__item:not(:last-child),
+	.header .menu-item:not(:last-child) {
 		margin-right: calc(10px + 5 * (100vw - 768px) / 492);
 	}
 
@@ -2919,7 +2925,8 @@ p.error-404__text {
 		flex-direction: column;
 	}
 
-	.header .menu__item:not(:last-child) {
+	.header .menu__item:not(:last-child),
+	.header .menu-item:not(:last-child) {
 		margin: 0 0 30px;
 	}
 

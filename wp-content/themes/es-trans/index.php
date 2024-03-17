@@ -63,7 +63,7 @@ Template Name: Главная
 			</div>
 		</div>
 	</section>
-	<section class="prices" data-watch="navigator" data-watch-threshold="0.25">
+	<section class="prices" id="prices" data-watch="navigator" data-watch-threshold="0.25">
 		<div class="prices__container">
 			<div class="prices__wrapper">
 				<h2 class="prices__title title">Цены</h2>
@@ -185,7 +185,7 @@ Template Name: Главная
 	<section class="action-block">
 		<?php get_template_part('template-parts/action-block'); ?>
 	</section>
-	<section class="services" data-watch="navigator" data-watch-threshold="0.15">
+	<section class="services" id="services" data-watch="navigator" data-watch-threshold="0.15">
 		<div class="services__container">
 			<h2 class="services__title title">Услуги</h2>
 			<div class="clearfix margin-bottom-50">
@@ -253,7 +253,7 @@ Template Name: Главная
 			<p class="services__text"><?php the_field('text-uslugi-2-11'); ?></p>
 		</div>
 	</section>
-	<section class="reviews" data-watch="navigator" data-watch-threshold="0.35">
+	<section class="reviews" id="reviews" data-watch="navigator" data-watch-threshold="0.35">
 		<div class="reviews__container">
 			<h2 class="reviews__title title">Отзывы</h2>
 			<div class="reviews__subtitle-box subtitle-box">
@@ -397,7 +397,7 @@ Template Name: Главная
 	<section class="action-block">
 		<?php get_template_part('template-parts/action-block'); ?>
 	</section>
-	<section class="contact" data-watch="navigator" data-watch-threshold="0.3">
+	<section class="contact" id="contact" data-watch="navigator" data-watch-threshold="0.3">
 		<div class="contact__container">
 			<h2 class="contact__title title">Контакты</h2>
 			<div class="contact__content">

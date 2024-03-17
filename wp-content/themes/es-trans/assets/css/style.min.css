@@ -948,10 +948,12 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon) {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.header .menu-item,
 .header .menu__item {
 	display: inline-block;
 	position: relative;
 }
+.header .menu-item:not(:last-child),
 .header .menu__item:not(:last-child) {
 	margin-right: 15px;
 }
@@ -1139,13 +1141,15 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon) {
 .services {
 	background: url(assets/img/services/bg-services.jpg) center/cover no-repeat fixed;
 }
-.services__img-box-400 {
+.services__img-box {
 	aspect-ratio: 400/300;
 	overflow: hidden;
 }
 .services__img {
 	width: 100%;
 	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .services__list {
 	padding-left: 20px;
@@ -1990,7 +1994,7 @@ p.error-404__text {
 	display: none !important;
 }
 .b24-form-recaptcha {
-	opacity: 0.5;
+	display: none !important;
 }
 .b24-form-field-agreement .b24-form-field-agreement-link {
 	font-size: 13px !important;
@@ -2330,6 +2334,7 @@ p.error-404__text {
 	.img-box-400 {
 		width: 30%;
 	}
+	.header .menu-item:not(:last-child),
 	.header .menu__item:not(:last-child) {
 		margin-right: calc(10px + 5 * (100vw - 768px) / 492);
 	}
@@ -2400,6 +2405,7 @@ p.error-404__text {
 		-ms-flex-direction: column;
 		flex-direction: column;
 	}
+	.header .menu-item:not(:last-child),
 	.header .menu__item:not(:last-child) {
 		margin: 0 0 30px;
 	}

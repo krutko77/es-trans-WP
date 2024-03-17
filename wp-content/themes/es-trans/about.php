@@ -10,7 +10,7 @@ Template Name: 404
 */
 ?>
 
-<?php get_header('back'); ?>
+<?php get_header('second'); ?>
 
 <main class="page text">
 	<section class="about" data-watch="navigator">

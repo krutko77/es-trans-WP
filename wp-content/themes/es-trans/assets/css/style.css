@@ -1205,12 +1205,14 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	flex-wrap: wrap;
 }
 
-.header .menu__item {
+.header .menu__item,
+.header .menu-item {
 	display: inline-block;
 	position: relative;
 }
 
-.header .menu__item:not(:last-child) {
+.header .menu__item:not(:last-child),
+.header .menu-item:not(:last-child) {
 	margin-right: 15px;
 }
 
@@ -1432,7 +1434,7 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 	background: url("assets/img/services/bg-services.jpg") center/cover no-repeat fixed;
 }
 
-.services__img-box-400 {
+.services__img-box {
 	aspect-ratio: 400/300;
 	overflow: hidden;
 }
@@ -1440,6 +1442,8 @@ button:not(.swiper-button-prev, .swiper-button-next, .menu__icon),
 .services__img {
 	width: 100%;
 	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 .services__list {
@@ -2410,7 +2414,7 @@ p.error-404__text {
 }
 
 .b24-form-recaptcha {
-	opacity: 0.5;
+	display: none !important;
 }
 
 .b24-form-field-agreement .b24-form-field-agreement-link {
@@ -2833,7 +2837,8 @@ p.error-404__text {
 		width: 30%;
 	}
 
-	.header .menu__item:not(:last-child) {
+	.header .menu__item:not(:last-child),
+	.header .menu-item:not(:last-child) {
 		margin-right: calc(10px + 5 * (100vw - 768px) / 492);
 	}
 
@@ -2919,7 +2924,8 @@ p.error-404__text {
 		flex-direction: column;
 	}
 
-	.header .menu__item:not(:last-child) {
+	.header .menu__item:not(:last-child),
+	.header .menu-item:not(:last-child) {
 		margin: 0 0 30px;
 	}
 
