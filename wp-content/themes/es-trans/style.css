@@ -2410,6 +2410,10 @@ p.error-404__text {
 	margin-right: 10px;
 }
 
+.b24-form input[type="checkbox"] {
+	width: 35px !important;
+}
+
 .b24-form-sign {
 	display: none !important;
 }

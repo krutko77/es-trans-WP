@@ -4,7 +4,7 @@ Template Name: Страница благодарности
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('second'); ?>
 
 <main class="page thank text">
 	<div class="thank__content">

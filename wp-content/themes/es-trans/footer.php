@@ -145,7 +145,7 @@
 </div>
 
 <script src="js/app.min.js?_v=20240307172627"></script>
-<script id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js?_v=20240307172627" data-bg="#645862" data-fg="#FFFFFF" data-link="#F1D600" data-font-size="13px" data-message="Мы cохраняем файлы cookie: если согласны, нажмите кнопку 'Принимаю'." data-moreinfo="http://es-trans/soglashenie/" data-linkmsg="Соглашение" data-close-text="Принимаю">
+<script id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js?_v=20240307172627" data-bg="#645862" data-fg="#FFFFFF" data-link="#F1D600" data-font-size="13px" data-message="Мы cохраняем файлы cookie: если согласны, нажмите кнопку 'Принимаю'." data-moreinfo="https://es-trans.ru/soglashenie/" data-linkmsg="Соглашение" data-close-text="Принимаю">
 </script>
 
 <?php wp_footer(); ?>

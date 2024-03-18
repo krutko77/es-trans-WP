@@ -4,7 +4,7 @@ Template Name: 404
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('second'); ?>
 
 <main class="page error-404 text">
 	<div class="error-404__container">
